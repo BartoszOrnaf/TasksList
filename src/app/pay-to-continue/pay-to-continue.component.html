@@ -1,0 +1,9 @@
+<p>
+ You have {{actionsLeft}} actions left!
+</p>
+<p *ngIf="actionsLeft < 1">
+  <Button (click)="resetActions()">Pay 2 PLN to continue</Button>
+ </p>
+ <p *ngIf="actionsLeft > 0">
+  <Button (click)="OneLess()">One action less button</Button>
+ </p>

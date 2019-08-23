@@ -1,4 +1,6 @@
-<div>
-  <input class='inputTask' [(ngModel)]="recentTask"> 
-  <button (click)="emitTask(recentTask)">Dodaj zadanie</button>
+<div class="container">
+  <span>
+    <input class="inputTask" [(ngModel)]="recentTask" (ngSubmit)="emitTask(recentTask)">
+    <button (click)="emitTask(recentTask)">Add</button>
+  </span>
 </div>

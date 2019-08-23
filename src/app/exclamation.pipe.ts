@@ -10,7 +10,8 @@ export class ExclamationPipe implements PipeTransform {
 
   }
   transform(value: string): string {
-    return `${this.uppercase.transform(value)}!`;
+
+   return `${this.uppercase.transform(value)}!`;
   }
 
 }

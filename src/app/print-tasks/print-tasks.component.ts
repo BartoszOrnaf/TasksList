@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TasksService } from '../tasks.service';
 import { PayToContinueService } from '../pay-to-continue.service';
-
-
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-print-tasks',
@@ -11,20 +10,20 @@ import { PayToContinueService } from '../pay-to-continue.service';
 })
 export class PrintTasksComponent implements OnInit {
 
-  
   taskList: Array<string>;
-    
-  constructor(private tasksService: TasksService, private payToContinueService: PayToContinueService) { }
+  // taskList$: Observable<Array<string>>;
+
+  constructor(private tasksService: TasksService, private payToContinueService: PayToContinueService) {
+
+  }
 
   ngOnInit() {
-      this.tasksService.getTaskListObs().subscribe(data => {
-        this.taskList = data
-      });
+    this.tasksService.getTaskListObs().subscribe(data => this.taskList = data.slice());
   }
 
   remove(task: string) {
-   this.tasksService.remove(task);
-   this.payToContinueService.oneActionLess();
+    this.tasksService.remove(task);
+    this.payToContinueService.oneActionLess();
   }
 
   done(task: string) {

@@ -1,7 +1,7 @@
-<div *ngIf="taskList.length>0; else noTasks">
+<div *ngIf="(taskList$ | async).length>0; else noTasks">
   <ul>
-    <li *ngFor="let task of taskList">
-      {{task}}
+    <li *ngFor="let task of taskList$ | async " appUncheckedng >
+      {{task |exclamation}}
       <button (click)="done(task)">Wykonane</button>
       <button (click)="remove(task)">Usuń</button>
     </li>

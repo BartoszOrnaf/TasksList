@@ -1,0 +1,14 @@
+<div *ngIf="taskList.length>0; else noTasks">
+  <ul>
+    <li *ngFor="let task of taskList | sort" appUnchecked class="lato small">
+      {{task.name}}
+      <br>
+      <button class="edit-btn" (click)="done(task)">DONE</button>
+      <button class="edit-btn" (click)="remove(task)">DELETE</button>
+      <button class="edit-btn">EDIT</button>
+    </li>
+  </ul>
+</div>
+<ng-template #noTasks>
+  <p style="text-align: center">There are no tasks to be done.</p>
+</ng-template>

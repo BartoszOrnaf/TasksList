@@ -1,0 +1,9 @@
+<form class="input-container">
+  <input class="inputTask" [(ngModel)]="inputTaskName" (ngSubmit)="emitTask()" [ngModelOptions]="{standalone: true}">
+  <button (click)="emitTask()" class="input-btn">ADD</button>
+</form>
+<div class="checkbox-container">
+    <input type="checkbox" id="inputCheckbox" (click)="toggleImportant()">
+    <label class="checkbox-label-imp" for="inputCheckbox">important!</label>
+</div>
+

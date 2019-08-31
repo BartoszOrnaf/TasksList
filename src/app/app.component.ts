@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PayToContinueService } from './pay-to-continue.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +6,9 @@ import { PayToContinueService } from './pay-to-continue.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  actionsLeft: number;
 
-  constructor(private payToContinueService: PayToContinueService) { }
-
+  constructor() { }
+  
   ngOnInit() {
-    this.payToContinueService.getActionsLeftObs().subscribe(data => { this.actionsLeft = data; }
-    )
   }
-
 }

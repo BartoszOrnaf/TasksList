@@ -1,25 +1,4 @@
-<!-- <div *ngIf="actionsLeft > 0">
-  <h1 class='container'>Lista Zadań</h1><br>
-  <div class='container'>
-    <app-input-task></app-input-task>
-  </div>
-  <div class='container'>
-    <app-print-tasks></app-print-tasks>
-    <div>
-      <app-done-list></app-done-list>
-    </div>
-  </div>
-</div> -->
-<div *ngIf="actionsLeft > 0">
-  <nav class="container">
-    <a routerLink="/inputtask"><button> Add task</button></a>
-    <a routerLink="/printtasks"><button>To-do list</button></a>
-    <a routerLink="/donelist"><button>Completed tasks</button></a>
-  </nav>
-  <br>
+<div class="container main-container">
+  <app-navbar></app-navbar>
   <router-outlet></router-outlet>
-</div>
-
-<div class="container">
-  <app-pay-to-continue></app-pay-to-continue>
 </div>

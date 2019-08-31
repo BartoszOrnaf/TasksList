@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DoneListComponent } from './done-list/done-list.component';
-import { InputTaskComponent } from './input-task/input-task.component';
-import { PrintTasksComponent } from './print-tasks/print-tasks.component';
+
+import { ArchiveComponent } from './components/archive/archive.component'
+import { HomeComponent } from './components/home/home.component'
+import { BadgesComponent } from './components/badges/badges.component';
 
 const routes: Routes = [
-    { path: 'donelist', component: DoneListComponent },
-    { path: 'inputtask', component: InputTaskComponent },
-    { path: 'printtasks', component: PrintTasksComponent }
+    { path: '', component: HomeComponent },
+    { path: 'home', component: HomeComponent },
+    { path: 'archive', component: ArchiveComponent },
+    { path: 'badges', component: BadgesComponent }
 ];
 
 @NgModule({
@@ -17,4 +19,4 @@ const routes: Routes = [
 
 export class AppRoutingModule {}
 
-export const RoutingComponents = [ DoneListComponent, InputTaskComponent, PrintTasksComponent ]
+export const RoutingComponents = [ HomeComponent, ArchiveComponent, BadgesComponent ]

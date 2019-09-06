@@ -2,7 +2,6 @@ $font-lato: "Lato", sans-serif;
 $font-big: 31px;
 $font-medium: 20px;
 $font-small: 16px;
-$font-small: 16px;
 $font-extra-small: 12px;
 
 $yellow: #ffdc32;
@@ -31,6 +30,14 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: $font-small;
+  font-weight: 800;
+  line-height: 19px;
+  text-align: center;
+  background-color: $paper-color;
+  margin: 0px;
+}
 .no-border {
   border-bottom: none;
   &:hover {
@@ -167,6 +174,13 @@ h1 {
     border-right: none;
   }
 }
+
+.badges-container {
+  background-color: $paper-color;
+  justify-self: center;
+  align-self: center;
+}
+
 
 .archive-container {
   display: grid;

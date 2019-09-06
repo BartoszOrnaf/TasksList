@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Task } from 'src/app/models/task';
 
@@ -15,7 +15,8 @@ export class TasksService {
     this.taskList = [{
       name: 'Eat, sleep, code, repeat',
       important: true,
-      completed: false
+      completed: true,
+      archived: false
     }];
     this.taskListObs.next(this.taskList);
    

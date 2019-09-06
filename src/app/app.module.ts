@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserModule,FormsModule, AppRoutingModule
   ],
   providers: [UpperCasePipe],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
+  

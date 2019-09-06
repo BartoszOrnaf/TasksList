@@ -10,7 +10,7 @@ import { Task } from '../../models/task'
 })
 export class InputTaskComponent implements OnInit {
   
-  recentTask = <Task> {name: '', important: false, completed: false}
+  recentTask = <Task> {name: '', important: false, completed: false, archived: false}
   inputTaskName = <string>'';
   isImportant:  false;
 

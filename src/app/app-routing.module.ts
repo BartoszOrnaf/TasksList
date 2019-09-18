@@ -6,11 +6,11 @@ import { HomeComponent } from './components/home/home.component'
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent },
-   
+    { path: 'archive',
+    loadChildren: './archive/archive.module#ArchiveModule' },
     { path: 'badges',
-            loadChildren: './badges/badges.module#BadgesModule' }
-    
-];
+    loadChildren: './badges/badges.module#BadgesModule' }
+    ];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

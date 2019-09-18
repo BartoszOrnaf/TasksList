@@ -17,7 +17,7 @@ export class DoneListComponent implements OnInit {
 
   ngOnInit() {
     this.tasksService.getTaskListObs().subscribe(data => 
-      this.taskList = data.filter(e => e.completed !== false));     
+      this.taskList = data.filter(e => e.completed !== false && e.archived !== true));     
   }
 
   remove(task: Task) {
@@ -26,6 +26,10 @@ export class DoneListComponent implements OnInit {
 
   done(task: Task) {
     this.tasksService.done(task);
+  }
+  
+  archive(task: Task){
+    this.tasksService.archive(task);
   }
 }
 

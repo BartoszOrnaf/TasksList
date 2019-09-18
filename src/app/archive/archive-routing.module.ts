@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BadgesComponent } from './components/badges/badges.component'
+import { ArchiveComponent } from './components/archive/archive.component';
+
 
 const routes: Routes = [
-    { path: '', component: BadgesComponent }    
+    { path: '', component: ArchiveComponent }
+    
 ];
 
 @NgModule({
@@ -11,4 +13,4 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 
-export class BadgesRoutingModule {}
+export class ArchiveRoutingModule {}

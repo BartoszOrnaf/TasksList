@@ -10,14 +10,16 @@ import { Task } from '../../models/task'
 export class PrintTasksComponent implements OnInit {
 
   taskList: Array<Task>;
- 
+
   constructor(private tasksService: TasksService) {
 
   }
 
   ngOnInit() {
-    this.tasksService.getTaskListObs().subscribe(data => 
-      this.taskList = data.filter(e => e.completed !== true && e.important !== true));
+    this.tasksService.getTaskListObs().subscribe(data =>
+     { this.taskList = data.filter(e =>  e.completed !== true && e.important !== true )}
+      );
+
   }
 
   remove(task: Task) {

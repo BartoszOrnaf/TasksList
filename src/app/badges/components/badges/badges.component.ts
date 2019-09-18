@@ -12,7 +12,9 @@ export class BadgesComponent implements OnInit {
 
   taskList: Array<Task>;
 
-  constructor(private tasksService: TasksService ) { }
+  constructor(
+    private tasksService: TasksService,
+  ) { }
 
   ngOnInit() { 
      this.tasksService.getTaskListObs().subscribe(data => 

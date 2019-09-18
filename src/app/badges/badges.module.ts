@@ -11,6 +11,7 @@ import { BadgesRoutingModule } from './badges-routing.module'
   imports: [
     CommonModule, BadgesRoutingModule 
   ], 
+  providers: [],
   exports: [BadgesComponent]
 })
 export class BadgesModule { }

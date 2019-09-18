@@ -3,9 +3,8 @@
     <li *ngFor="let task of taskList | sort" appChecked class="lato small">
       {{task.name}}
       <br>
-      <button class="edit-btn" >ARCHIVE</button>
+      <button class="edit-btn" (click)="archive(task)" >ARCHIVE</button>
       <button class="edit-btn" (click)="remove(task)">DELETE</button>
-      <button class="edit-btn">EDIT</button>
     </li>
   </ul>
 </div>

@@ -14,9 +14,7 @@ import { DoneListComponent } from './components/done-list/done-list.component';
 import { InputTaskComponent } from './components/input-task/input-task.component';
 import { PrintTasksComponent } from './components/print-tasks/print-tasks.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
-
-
+import { TasksService } from './services/tasks.service';
 
 
 @NgModule({
@@ -37,9 +35,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
   ],
   imports: [
-    BrowserModule,FormsModule, AppRoutingModule
+    BrowserModule,FormsModule, AppRoutingModule,
   ],
-  providers: [UpperCasePipe],
+  providers: [UpperCasePipe, TasksService],
   bootstrap: [AppComponent],
   
 })

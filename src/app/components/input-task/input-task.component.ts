@@ -27,8 +27,9 @@ export class InputTaskComponent implements OnInit {
     if(this.inputTaskName !== '')
     {
     this.recentTask.name = this.inputTaskName;
+    this.recentTask.createdAt = new Date;
     this.tasksService.addTask(this.recentTask);
-    this.inputTaskName = '';
+    this.inputTaskName = '';    
   }else{
     alert("Please input a task before submitting!")
   }

@@ -2,58 +2,58 @@
 
 <div class="container">
   <div class="row">
-    <img src="../../../assets/notepad-spiral-small.png" class='banner'>
+    <img src="./assets/notepad-spiral-small.png" class='banner'>
   </div>
 </div>
 <h2>THIS WEEK'S PROGRESS:</h2>
 <div class="todo-container badges-container">
 
-  <div class="badges-container"><img src="../../../assets/badge1task.png"></div>
+  <div class="badges-container"><img src="./assets/badge1task.png"></div>
 
   <div class="badges-container" *ngIf="taskList.length>4; else tasks5">
-    <img src="../../../assets/badge5.png">
+    <img src="./assets/badge5.png">
   </div>
   <ng-template class="badges-container" #tasks5>
     <div class="badges-container">
-      <img src="../../../assets/badge5-greyed.png">
+      <img src="./assets/badge5-greyed.png">
     </div>
   </ng-template>
 
   <div class="badges-container" *ngIf="taskList.length>9; else tasks10">
-    <img src="../../../assets/badge10.png">
+    <img src="./assets/badge10.png">
   </div>
   <ng-template #tasks10>
     <div class="badges-container">
-      <img src="../../../assets/badge10-greyed.png">
+      <img src="./assets/badge10-greyed.png">
     </div>
   </ng-template>
 
   <div class="badges-container" *ngIf="taskList.length>14; else tasks15">
     <div class="badges-container">
-      <img src="../../../assets/badge15.png">
+      <img src="./assets/badge15.png">
     </div>
   </div>
   <ng-template #tasks15>
     <div class="badges-container">
-      <img src="../../../assets/badge15-greyed.png">
+      <img src="./assets/badge15-greyed.png">
     </div>
   </ng-template>
 
   <div class="badges-container" *ngIf="taskList.length>29; else tasks30">
-    <img src="../../../assets/badge30.png">
+    <img src="./assets/badge30.png">
   </div>
   <ng-template #tasks30>
     <div class="badges-container">
-      <img src="../../../assets/badge30-greyed.png">
+      <img src="./assets/badge30-greyed.png">
     </div>
   </ng-template>
 
   <div class="badges-container" *ngIf="taskList.length>49; else tasks50">
-    <img src="../../../assets/badge50.png">
+    <img src="./assets/badge50.png">
   </div>
   <ng-template #tasks50>
     <div class="badges-container">
-      <img src="../../../assets/badge50-greyed.png">
+      <img src="./assets/badge50-greyed.png">
     </div>
   </ng-template>
 
@@ -61,6 +61,6 @@
 
 <div class="container">
   <div class="row">
-    <img src="../../../assets/notepad-end.png" class='notepad-end'>
+    <img src="./assets/notepad-end.png" class='notepad-end'>
   </div>
 </div>

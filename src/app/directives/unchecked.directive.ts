@@ -11,7 +11,7 @@ export class UncheckedDirective {
 
   ngOnInit(): void {
     let recentLi = this.el.nativeElement;
-    this.render.setStyle(recentLi, 'list-style-image', 'url("/assets/incorrect-12px.png")');     
+    this.render.setStyle(recentLi, 'list-style-image', 'url("./assets/incorrect-12px.png")');     
   
   }
 }
